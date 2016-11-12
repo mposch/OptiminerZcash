@@ -35,11 +35,11 @@ $ ./optiminer-zcash -h
 
 ### `GLIBCXX_3.4.20' not found on Ubuntu 14.04
 Install the required libstc++:
-^^^
+```shell
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test 
 sudo apt-get update
 sudo apt-get install libstdc++6
-^^^
+```
 
 ### Failed to read bin/X_base.bin
 You need to run the miner from the directroy where optiminer-zcash is in
