@@ -2,11 +2,11 @@
 
 GPU miner for Zcash.
 
-## v0.1 (Beta)
-[Download link](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.1.tar.gz)
+## v0.1.1 (Beta)
+[Download link](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.1.1.tar.gz)
 
-$ sha256sum optiminer-zcash-0.1.tar.gz 
-d5df160c6e23fb6071d15265ed92452a138aa4452a689648240f63ce7ab04338  optiminer-zcash-0.1.tar.gz
+$ sha256sum optiminer-zcash-0.1.1.tar.gz 
+2ee2c94e15a14b1ba9a066973429279ea8666fbb66e483cb41e3950680a4c17e  optiminer-zcash-0.1.1.tar.gz
 
 Supports:
 - Linux 64bit only.
