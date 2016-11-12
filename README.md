@@ -2,30 +2,25 @@
 
 GPU miner for Zcash.
 
-## v0.2 (Beta)
-[Download link](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.2.tar.gz)
-
-$ sha256sum optiminer-zcash-0.2.tar.gz 
-f550869b65162f608a4b40a9f7401e1d6bdbe62ad47327e13287553f28b95c51  optiminer-zcash-0.2.tar.gz
+## v0.3.0 (Beta)
+[Download link](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.0.tar.gz)
 
 Supports:
 - Linux 64bit only.
-- Fiji cards (R9 Nano, Fury, Fury X)
-- Hawaii cards (R9 290, 290X, 390, 390X)
+- AMD Radeon cards only.
 
 Expected speed:
 - R9 Nano: 175S/s
 - R9 290: 135S/s
-
-Support for further cards can be added, ping optiminer@tutamail.com if you
-want to run it on a large number of AMD cards that are currently not
-supported.
+- RX 470: 120S/s
 
 Windows support may be added in a future version.
 
-No nvidia support planned at the moment.
+No NVIDIA support planned at the moment.
 
 ## Changelog
+- [0.3] New way of distributing kernels.
+- [0.2.1] Fix invalid machine instruction error.
 - [0.2] Filter invalid solutions on GPU.
 - [0.1.1] Fix startup crash.
 
