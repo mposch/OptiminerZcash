@@ -30,3 +30,17 @@ $ ./optiminer-zcash -s eu1-zcash.flypool.org:3333 -u t1Yszagk1jBjdyPfs2GxXx1GWcf
 
 For a list of all options run with '-h':
 $ ./optiminer-zcash -h
+
+## Troubleshooting
+
+### `GLIBCXX_3.4.20' not found on Ubuntu 14.04
+Install the required libstc++:
+^^^
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test 
+sudo apt-get update
+sudo apt-get install libstdc++6
+^^^
+
+### Failed to read bin/X_base.bin
+You need to run the miner from the directroy where optiminer-zcash is in
+otherwise it will not find the opencl kernel.
