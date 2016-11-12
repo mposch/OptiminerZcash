@@ -25,6 +25,10 @@ Windows support may be added in a future version.
 
 No nvidia support planned at the moment.
 
+## Changelog
+- [0.2] Filter invalid solutions on GPU.
+- [0.1.1] Fix startup crash.
+
 ## Usage:
 Run from the archive root directory:
 $ ./optiminer-zcash -s eu1-zcash.flypool.org:3333 -u t1Yszagk1jBjdyPfs2GxXx1GWcfn6fdTuFJ.example -p password
