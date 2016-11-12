@@ -2,7 +2,7 @@
 
 GPU miner for Zcash.
 
-## v0.1
+## v0.1 (Beta)
 [Download link](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.1.tar.gz)
 
 $ sha256sum optiminer-zcash-0.1.tar.gz 
