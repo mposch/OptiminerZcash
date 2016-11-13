@@ -26,7 +26,6 @@ The miner contains a fee for supporting the dev. All shown hash rates are
 net rate, i.e., with fee deducted. What you see is what You get!
 
 ## Changelog
-- [0.3.1a]Fix windows connection failure and wrong binary name.
 - [0.3.1] Slight improvement on hashing speed on some cards.
 - [0.3.1] Turn off writing to log file.
 - [0.3.1] Enable thread-safe mode for logging library.
