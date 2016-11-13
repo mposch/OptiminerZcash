@@ -5,7 +5,7 @@ GPU miner for Zcash.
 ## v0.3.1 (Beta)
 [Download Linux 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.1.tar.gz)
 
-[Download Windows 32bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.1.zip)
+[Download Windows 32bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.1a.zip)
 
 Supports:
 - Linux 64bit only.
@@ -25,6 +25,7 @@ The miner contains a fee for supporting the dev. All shown hash rates are
 net rate, i.e., with fee deducted. What you see is what You get!
 
 ## Changelog
+- [0.3.1a]Fix windows connection failure and wrong binary name.
 - [0.3.1] Slight improvement on hashing speed on some cards.
 - [0.3.1] Turn off writing to log file.
 - [0.3.1] Enable thread-safe mode for logging library.
@@ -43,7 +44,7 @@ For a list of all options run with '-h':
 $ ./optiminer-zcash -h
 
 ### Windows:
-You need to intall [Cygwin](https://www.cygwin.com/) first! Then, run the
+You need to intall [32-bit Cygwin](https://www.cygwin.com/) first! Then, run the
 command above from within the cygwin terminal!
 
 ## Troubleshooting
