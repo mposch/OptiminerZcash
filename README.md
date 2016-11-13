@@ -5,11 +5,12 @@ GPU miner for Zcash.
 ## v0.3.1 (Beta)
 [Download Linux 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.1.tar.gz)
 
+<!--
 [Download Windows 32bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.1a.zip)
+-->
 
 Supports:
 - Linux 64bit only.
-- Windows *very alpha*.
 - AMD Radeon cards only.
 
 Expected speed (stock card):
@@ -43,9 +44,11 @@ $ ./optiminer-zcash -s eu1-zcash.flypool.org:3333 -u t1Yszagk1jBjdyPfs2GxXx1GWcf
 For a list of all options run with '-h':
 $ ./optiminer-zcash -h
 
+<!--
 ### Windows:
 You need to intall [32-bit Cygwin](https://www.cygwin.com/) first! Then, run the
 command above from within the cygwin terminal!
+-->
 
 ## Troubleshooting
 
