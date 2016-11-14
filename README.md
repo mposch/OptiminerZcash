@@ -2,7 +2,7 @@
 
 GPU miner for Zcash.
 
-## v0.3.1 (Beta)
+## v0.3.2 (Beta)
 [Download Linux 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.1.tar.gz)
 
 <!--
@@ -11,12 +11,12 @@ GPU miner for Zcash.
 
 Supports:
 - Linux 64bit only.
-- AMD Radeon cards only.
+- AMD GCN cards only.
 
 Expected speed (stock card):
-- R9 Nano: 180S/s
-- R9 290: 135S/s
-- RX 470: 125S/s
+- R9 Nano: 185S/s
+- R9 290: 140S/s
+- RX 470: 130S/s
 
 Windows support may be added in a future version.
 
@@ -26,6 +26,10 @@ The miner contains a fee for supporting the dev. All shown hash rates are
 net rate, i.e., with fee deducted. What you see is what You get!
 
 ## Changelog
+- [0.3.2] Re-enable file logging though --log-file.
+- [0.3.2] Fix bug in extranonce subscription.
+- [0.3.2] Improve stratum client stability.
+- [0.3.2] Reduced dev fee.
 - [0.3.1] Slight improvement on hashing speed on some cards.
 - [0.3.1] Turn off writing to log file.
 - [0.3.1] Enable thread-safe mode for logging library.
@@ -42,6 +46,9 @@ $ ./optiminer-zcash -s eu1-zcash.flypool.org:3333 -u t1Yszagk1jBjdyPfs2GxXx1GWcf
 
 For a list of all options run with '-h':
 $ ./optiminer-zcash -h
+
+There is also a 'mine.sh' script which shows how to uses it in an infinite
+loop to restart if it crashes.
 
 <!--
 ### Windows:
@@ -62,3 +69,8 @@ sudo apt-get install libstdc++6
 ### Failed to read bin/X_base.bin
 You need to run the miner from the directroy where optiminer-zcash is in
 otherwise it will not find the opencl kernel.
+
+### libOpenCL.so.1 cannot open object
+There is a problem with your OpenCL installation. Make sure that there is a
+symlink /usr/lib/libOpenCL.so.1 that points to the OpenCL library on your
+system.
