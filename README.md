@@ -2,8 +2,8 @@
 
 GPU miner for Zcash.
 
-## v0.3.2 (Beta)
-[Download Linux 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.2.tar.gz)
+## v0.3.3 (Beta)
+[Download Linux 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.3.tar.gz)
 
 <!--
 [Download Windows 32bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.1a.zip)
@@ -26,6 +26,7 @@ The miner contains a fee for supporting the dev. All shown hash rates are
 net rate, i.e., with fee deducted. What you see is what You get!
 
 ## Changelog
+- [0.3.3] Fix VM_CONTEXT1_PROTECTION_FAULT_ADDR.
 - [0.3.2] Re-enable file logging though --log-file.
 - [0.3.2] Fix bug in extranonce subscription.
 - [0.3.2] Improve stratum client stability.
