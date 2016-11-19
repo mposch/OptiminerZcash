@@ -2,9 +2,9 @@
 
 GPU miner for Zcash.
 
-## v0.3.4 (Beta)
+## v0.4.0 (Beta)
 [Download Linux
-64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.4.tar.gz)
+64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.4.0.tar.gz)
 
 <!--
 [Download Windows 32bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.1a.zip)
@@ -15,9 +15,9 @@ Supports:
 - AMD GCN cards only.
 
 Expected speed (stock card):
-- R9 Nano: 185S/s
-- R9 290: 140S/s
-- RX 470: 130S/s
+- R9 Nano: 195 S/s
+- R9 290: 145 S/s
+- RX 470: 135 S/s
 
 Windows support may be added in a future version.
 
@@ -25,24 +25,6 @@ No NVIDIA support planned at the moment.
 
 The miner contains a fee for supporting the dev. All shown hash rates are
 net rate, i.e., with fee deducted. What you see is what You get!
-
-## Changelog
-- [0.3.4] Add GPU watchdog (--watchdog-timeout and --watchdog-cmd)
-- [0.3.4] Fix deadlock in stratum client.
-- [0.3.3] Fix VM_CONTEXT1_PROTECTION_FAULT_ADDR.
-- [0.3.2] Re-enable file logging though --log-file.
-- [0.3.2] Fix bug in extranonce subscription.
-- [0.3.2] Improve stratum client stability.
-- [0.3.2] Reduced dev fee.
-- [0.3.1] Slight improvement on hashing speed on some cards.
-- [0.3.1] Turn off writing to log file.
-- [0.3.1] Enable thread-safe mode for logging library.
-- [0.3.1] Support for extranonce.subscribe for improved compatibility with
-  NiceHash
-- [0.3.0] New way of distributing kernels.
-- [0.2.1] Fix invalid machine instruction error.
-- [0.2.0] Filter invalid solutions on GPU.
-- [0.1.1] Fix startup crash.
 
 ## Usage:
 Run from the archive root directory:
@@ -78,3 +60,23 @@ otherwise it will not find the opencl kernel.
 There is a problem with your OpenCL installation. Make sure that there is a
 symlink /usr/lib/libOpenCL.so.1 that points to the OpenCL library on your
 system.
+
+## Changelog
+- [0.4.0] Async solution validation and reporting.
+- [0.4.0] Added monitoring port (see -m).
+- [0.3.4] Add GPU watchdog (--watchdog-timeout and --watchdog-cmd).
+- [0.3.4] Fix deadlock in stratum client.
+- [0.3.3] Fix VM_CONTEXT1_PROTECTION_FAULT_ADDR.
+- [0.3.2] Re-enable file logging though --log-file.
+- [0.3.2] Fix bug in extranonce subscription.
+- [0.3.2] Improve stratum client stability.
+- [0.3.2] Reduced dev fee.
+- [0.3.1] Slight improvement on hashing speed on some cards.
+- [0.3.1] Turn off writing to log file.
+- [0.3.1] Enable thread-safe mode for logging library.
+- [0.3.1] Support for extranonce.subscribe for improved compatibility with
+  NiceHash
+- [0.3.0] New way of distributing kernels.
+- [0.2.1] Fix invalid machine instruction error.
+- [0.2.0] Filter invalid solutions on GPU.
+- [0.1.1] Fix startup crash.
