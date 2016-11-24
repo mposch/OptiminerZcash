@@ -2,22 +2,18 @@
 
 GPU miner for Zcash.
 
-## v0.4.0 (Beta)
-[Download Linux
-64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.4.0.tar.gz)
-
-<!--
-[Download Windows 32bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.3.1a.zip)
--->
+## v0.5.0 (Beta)
+[Download Linux 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.5.0.tar.gz)
+[Download Windows 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.5.0.zip)
 
 Supports:
-- Linux 64bit only.
+- Linux and Windows 64bit only.
 - AMD GCN cards only.
 
 Expected speed (stock card):
-- R9 Nano: 195 S/s
-- R9 290: 145 S/s
-- RX 470: 135 S/s
+- R9 Nano: 205 S/s
+- R9 290: 155 S/s
+- RX 480: 145 S/s
 
 Windows support may be added in a future version.
 
@@ -33,16 +29,22 @@ $ ./optiminer-zcash -s eu1-zcash.flypool.org:3333 -u t1Yszagk1jBjdyPfs2GxXx1GWcf
 For a list of all options run with '-h':
 $ ./optiminer-zcash -h
 
-There is also a 'mine.sh' script which shows how to uses it in an infinite
-loop to restart if it crashes.
-
-<!--
-### Windows:
-You need to intall [32-bit Cygwin](https://www.cygwin.com/) first! Then, run the
-command above from within the cygwin terminal!
--->
+There are also 'mine.sh' and 'start.bat' scripts for running it under
+Windows and Unix. Just edit the pool and user settings before running!
 
 ## Troubleshooting
+
+### Intensity
+Starting with version 0.5.0, there is an intensity option (-i). Higher
+intensity generally means faster hashing. But if it is too high, the miner
+might crash or have very poor performance. The miner tries to auto-detect
+the best intensity for your card but you can experiment with different
+values.
+
+E.g., adding '-i 2' to command line sets intensity to 2 for all cards. If
+you have multiple card you can specify one '-i' for each card, e.g., if you
+have four cards '-i 3 -i 4 -i 4 -i 3' (same order as -d). An intensity value
+of 0 means auto-detect.
 
 ### `GLIBCXX_3.4.20' not found on Ubuntu 14.04
 Install the required libstc++:
@@ -62,6 +64,7 @@ symlink /usr/lib/libOpenCL.so.1 that points to the OpenCL library on your
 system.
 
 ## Changelog
+- [0.5.0] Add intensity for increased hash rates.
 - [0.4.0] Async solution validation and reporting.
 - [0.4.0] Added monitoring port (see -m).
 - [0.3.4] Add GPU watchdog (--watchdog-timeout and --watchdog-cmd).
