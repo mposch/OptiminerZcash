@@ -2,19 +2,19 @@
 
 GPU miner for Zcash.
 
-## v0.5.0 (Beta)
-[Download Linux 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.5.0.tar.gz)
+## v0.6.0 (Beta)
+[Download Linux 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.6.0.tar.gz)
 
-[Download Windows 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.5.0.zip)
+[Download Windows 64bit](https://github.com/Optiminer/OptiminerZcash/raw/master/optiminer-zcash-0.6.0.zip)
 
 Supports:
 - Linux and Windows 64bit only.
 - AMD GCN cards only.
 
 Expected speed (stock card):
-- R9 Nano: 205 S/s
-- R9 290: 155 S/s
-- RX 480: 145 S/s
+- R9 Nano: 255 S/s
+- R9 290: 190 S/s
+- RX 480: 185 S/s
 
 Windows support may be added in a future version.
 
@@ -55,7 +55,7 @@ sudo apt-get update
 sudo apt-get install libstdc++6
 ```
 
-### Failed to read bin/X_base.bin
+### Failed to read bin/base.bin
 You need to run the miner from the directroy where optiminer-zcash is in
 otherwise it will not find the opencl kernel.
 
@@ -65,6 +65,7 @@ symlink /usr/lib/libOpenCL.so.1 that points to the OpenCL library on your
 system.
 
 ## Changelog
+- [0.6.0] 20-30% speed improvements.
 - [0.5.0] Add intensity for increased hash rates.
 - [0.4.0] Async solution validation and reporting.
 - [0.4.0] Added monitoring port (see -m).
