@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # General options
 
@@ -10,27 +10,32 @@ export GPU_FORCE_64BIT_PTR=1
 
 # Flypool:
 # uses cash address as user
+VERSION=optiminer-zcash-0.6.0
 POOL=eu1-zcash.flypool.org:3333
 ADDRESS=t1cELmy7HqZR4ioPEnGud897Z8F52kXhVks
 WORKER=`hostname | cut -d . -f 1`GPU
-USER=$ADDRESS.$WORKER
-PASSWORD=x
 
-# Nicehash:
-# uses bitcoin address as user
+USER=$ADDRESS.$WORKER
+MINER=./optiminer-zcash
+WORKDIR=optiminer-zcash
+
+
+# try to extract optiminer
+ tar -xvf $VERSION.tar.gz
+#Nicehash:
+#uses bitcoin address as user
 #POOL=equihash.usa.nicehash.com:3357
 #USER=19STEagfLfbb1XdTF9NCf5kmxZHGchSiZj
 #PASSWORD=x
 
-# suprnova.cc
+#suprnova.cc
 #POOL=zec.suprnova.cc:2142
 #USER=Weblogin.Worker
 #PASSWORD=WorkerPassword
-
-cd "$(dirname "$0")"
+cd $WORKDIR
 while true
 do
-  ./optiminer-zcash -s $POOL -u $USER --watchdog-timeout 30 --watchdog-cmd "./watchdog-cmd.sh"
+$MINER -s $POOL -u $USER --watchdog-timeout 30 --watchdog-cmd "reboot"
   if [ $? -eq 134 ]
   then
     break
