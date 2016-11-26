@@ -11,7 +11,9 @@ export GPU_FORCE_64BIT_PTR=1
 # Flypool:
 # uses cash address as user
 POOL=eu1-zcash.flypool.org:3333
-USER=t1Yszagk1jBjdyPfs2GxXx1GWcfn6fdTuFJ.worker
+ADDRESS=t1cELmy7HqZR4ioPEnGud897Z8F52kXhVks
+WORKER=`hostname | cut -d . -f 1`GPU
+USER=$ADDRESS.$WORKER
 PASSWORD=x
 
 # Nicehash:
@@ -28,7 +30,7 @@ PASSWORD=x
 cd "$(dirname "$0")"
 while true
 do
-  ./optiminer-zcash -s $POOL -u $USER -p $PASSWORD --watchdog-timeout 30 --watchdog-cmd "./watchdog-cmd.sh"
+  ./optiminer-zcash -s $POOL -u $USER --watchdog-timeout 30 --watchdog-cmd "./watchdog-cmd.sh"
   if [ $? -eq 134 ]
   then
     break
