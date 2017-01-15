@@ -1,0 +1,46 @@
+#!/bin/bash  
+# General options
+# The following line did not have any effect on my system but might reduce CPU usage on some.
+# export GPU_SYNC_OBJECTS=1
+
+export GPU_FORCE_64BIT_PTR=1
+POOL=eu1-zcash.flypool.org:3333
+#POOL=zstratum+tls://$POOL
+ADDRESS=t1cELmy7HqZR4ioPEnGud897Z8F52kXhVks
+WORKER=`hostname | cut -d . -f 1`
+USER=$ADDRESS.$WORKER
+MINER=optiminer-zcash
+WORKDIR=/home/matthias/OptiminerZcash/optiminer-zcash/
+LOGFILE=/home/matthias/OptiminerZcash/logs/mine.log
+echo `date` START RUN SCRIPT  >> $LOGFILE
+
+
+
+# test if optiminer is running
+ps cax | grep $MINER >> /dev/null
+if [ $? -eq 0 ]; then
+  echo  "Process is running."
+  CON=`curl -s localhost:3301 | jq '.stratum.connected'`  
+ if [ $CON = "true" ]; then
+ 	echo Optiminer running and connected.
+	echo Optiminer running and connected. >> $LOGFILE
+ 	exit 0
+else
+	echo Optiminer running but not connected. >> $LOGFILE
+ fi
+else
+  echo "Optiminer process not found. " >> $LOGFILE
+fi
+
+# OPTIMINER NOT RUNNING OR NOT CONNECTED
+# first make sure we kill all instances of optiminer, if any running
+killall $MINER
+echo `date` STARTING OPTIMINER >> $LOGFILE
+echo `date` STARTING OPTIMINER
+# Ensure the directory is correct for subsecquent calls:
+cd $WORKDIR
+sleep 1
+OPTS="--watchdog-timeout 30 --watchdog-cmd reboot -m 3301 -l $LOGFILE --max-log-file-size 400000 --max-log-files 50"
+./$MINER -s $POOL -u $USER $OPTS 
+
+echo `date`  OPTIMIINER EXITED  >> $LOGFILE
